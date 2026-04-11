@@ -9,7 +9,7 @@ class DataLoader:
 
     def load(self):
         self.points = np.loadtxt(self.filepath, delimiter=",", skiprows=1)
-        print(f"Загружено точек: {len(self.points)}")
+        print(f"Нүкте салынды: {len(self.points)}")
         return self.points
 
 
@@ -22,14 +22,14 @@ class CenterSelector:
 
     def first_k(self):
         centers = self.points[:self.k].copy()
-        print(f"Стартовые центры (первые {self.k}):\n{centers}")
+        print(f"Бастау орталықтар (бірінші {self.k}):\n{centers}")
         return centers
 
     def random_k(self):
         rng = np.random.default_rng(self.seed)
         idx = rng.choice(len(self.points), size=self.k, replace=False)
         centers = self.points[idx].copy()
-        print(f"Стартовые центры (случайные, seed={self.seed}):\n{centers}")
+        print(f"Бастау орталықтар (кез келген, seed={self.seed}):\n{centers}")
         return centers
 
 
