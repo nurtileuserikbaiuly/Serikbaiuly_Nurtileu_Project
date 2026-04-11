@@ -32,7 +32,7 @@ class KMeans:
         for i in range(n_iter):
             self._assign()
             self._update_centers()
-            print(f"Итерация {i+1}: центры =\n{self.centers}")
+            print(f"Итерация {i+1}: орталықтар =\n{self.centers}")
         return self.labels, self.centers
 
 
@@ -54,9 +54,9 @@ class KMeansPlotter:
             )
         plt.scatter(
             self.centers[:, 0], self.centers[:, 1],
-            c="black", marker="X", s=200, label="Центры"
+            c="black", marker="X", s=200, label="Орталықтар"
         )
-        plt.title("K-means (k=3, 10 итераций)")
+        plt.title("K-means (k=3, 10 итерация саны)")
         plt.legend()
         plt.tight_layout()
         plt.savefig(filename)
