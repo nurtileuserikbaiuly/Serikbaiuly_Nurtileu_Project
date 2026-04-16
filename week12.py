@@ -20,7 +20,7 @@ class CentersTable:
 
     def save(self, filepath="centers.csv"):
         self.df.to_csv(filepath, index=False)
-        print(f"\nСохранено в файл: {filepath}")
+        print(f"\nФайлға сақталды: {filepath}")
 
 if __name__ == "__main__":
     loader = DataLoader("points.csv")
