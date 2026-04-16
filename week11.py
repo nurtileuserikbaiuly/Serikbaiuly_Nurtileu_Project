@@ -17,7 +17,7 @@ class ClusterDataFrame:
             "cluster_id": self.labels
         })
         print(self.df)
-        print(f"\nВсего строк: {len(self.df)}")
+        print(f"\nБарлық жол: {len(self.df)}")
         return self.df
 
 if __name__ == "__main__":
