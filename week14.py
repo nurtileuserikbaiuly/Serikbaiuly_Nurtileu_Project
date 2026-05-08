@@ -4,7 +4,6 @@ from week10 import KMeans
 
 app = Flask(__name__)
 
-
 class KMeansAPI:
 
     def __init__(self, k=3, seed=42, n_iter=10):
@@ -15,9 +14,7 @@ class KMeansAPI:
     def run(self, points_list):
         import numpy as np
 
-
         points = np.array(points_list)
-
 
         selector = CenterSelector(points, k=self.k, seed=self.seed)
         centers = selector.random_k()
